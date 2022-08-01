@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+}
+.Geeks {
+  /* background-image: url("https://wallpaperaccess.com/full/329605.jpg"); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  background-attachment: scroll;
+  margin-top: 70px;
+  background-position: 50% 50%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: "";
+  z-index: 0;
+}
+
+.about {
+  min-height: 50vh;
+  margin: auto;
+  margin-top: 100px;
+  width: 50vw;
+  padding: 50px 50px 50px 50px;
+  background: #62767e;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: justify;
+  border: 3px solid #73ad21;
+}
+
+@media (max-width: 480px) {
+  .about {
+    display: flex;
+    font-size: smaller;
+  }
+}
