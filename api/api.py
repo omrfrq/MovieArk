@@ -17,7 +17,9 @@ from flask_cors import CORS
 # from tmdbv3api import Movie
 
 
-app = Flask(__name__, static_url_path='', static_folder='templates/static')
+# app = Flask(__name__, static_url_path='', static_folder='templates/static')
+
+app = Flask(__name__, static_folder='../build', static_url_path='/')
 
 #Flask
 #app = Flask(__name__)
@@ -514,9 +516,13 @@ def Narrow_down(list):
 # @app.route("/")
 # def home():
 #     return render_template('index.html')
-    
-@app.route('/fetch', methods=["POST"])
 
+@app.route('/')
+def index():
+  return app.send_static_file('index.html')
+    
+
+@app.route('/api/fetch', methods=["POST"])
 def hello_world():
 
     filterlist={}
@@ -531,6 +537,7 @@ def hello_world():
 
 
 if __name__ == '__main__':
-    app.config['WTF_CSRF_ENABLED'] = False
-    #app = app.test_client()
-    app.run(host="0.0.0.0")
+  app.run()
+    # app.config['WTF_CSRF_ENABLED'] = False
+    # #app = app.test_client()
+    # app.run(host="0.0.0.0")

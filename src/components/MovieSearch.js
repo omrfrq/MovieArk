@@ -51,7 +51,7 @@ function MovieSearch(props) {
       11: query11,
     };
 
-    const url = "/fetch"; //`https://api.themoviedb.org/3/search/movie?api_key=a662712626815555702f1c6320550397&language=en-US&query=${query}&page=1&include_adult=false`;
+    const url = "/api/fetch"; //`https://api.themoviedb.org/3/search/movie?api_key=a662712626815555702f1c6320550397&language=en-US&query=${query}&page=1&include_adult=false`;
 
     if (
       query1 !== "" ||
